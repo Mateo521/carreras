@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
-
     <div class="video-bg">
         <video width="320" height="240" autoplay loop muted>
             <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
@@ -173,7 +169,6 @@
                         <a class="main-header-link is-active" href="#">Desktop</a>
                         <a class="main-header-link" href="#">Mobile</a>
                         <a class="main-header-link" href="#">Web</a>
-
                     </div>
                 </div>
                 <div class="content-wrapper">
@@ -235,7 +230,6 @@
                                     </svg>
                                     Illustrator
                                 </div>
-
                                 <span class="status">
                                     <span class="status-circle"></span>
                                     Update Available</span>
@@ -302,7 +296,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="content-section">
                         <div class="content-section-title">Carreras</div>
 
@@ -343,8 +336,6 @@
                                 </select>
                                 <button type="submit">Obtener Contenido</button>
                             </form>
-
-
                             <ul>
                                 <?php
                                 foreach ($containers as $container) {
@@ -358,9 +349,6 @@
                                     $imgElement = $doc->getElementsByTagName('img')->item(0);
                                     $imgSrc = $imgElement->getAttribute('src');
                                 ?>
-
-
-
                                     <li class="adobe-product carres">
                                         <div class="products">
                                             <?php echo $text; ?>
@@ -380,8 +368,6 @@
                                         </div>
                                     </li>
                                     <!--p class="card-text"></p-->
-
-
                                 <?php
                                 }
                                 ?>
@@ -390,10 +376,7 @@
                         }
                             ?>
                             <ul>
-
                     </div>
-
-
                     <div class="content-section">
                         <div class="content-section-title">Apps in your plan</div>
                         <div class="apps-card">
@@ -451,25 +434,8 @@
             </div>
         </div>
         <div class="overlay-app"></div>
-
     </div>
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js.js"></script>
-
-
-
-
-
-
-
-
-
-
 </body>
-
 </html>
