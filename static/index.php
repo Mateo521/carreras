@@ -56,7 +56,7 @@
                                 <path xmlns="http://www.w3.org/2000/svg" d="M192 192h128v128H192zm0 0" fill="currentColor" data-original="#82b1ff" />
                                 <path xmlns="http://www.w3.org/2000/svg" d="M384 192h128v128H384zm0 0M0 384h128v128H0zm0 0M192 384h128v128H192zm0 0M384 384h128v128H384zm0 0" fill="currentColor" data-original="#bfc9d1" />
                             </svg>
-                            All Apps
+                            Todas las apps
                         </a>
                         <a href="#">
                             <svg viewBox="0 0 488.932 488.932" fill="currentColor">
