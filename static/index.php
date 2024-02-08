@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="video-bg">
         <video width="320" height="240" autoplay loop muted>
@@ -320,9 +322,40 @@
                             libxml_clear_errors();
                             $xpath = new DOMXPath($dom);
                             $containers = $xpath->query('//div[@class="col-md-6 col-sm-6 col-lg-6 col-12"]');
-                        ?>
+                       
+                     
+
+                            // Array de enlaces
+                            $carreras = array(
+                                "https://carreras.unsl.edu.ar/facultades/fcfmyn/1",
+                                "https://carreras.unsl.edu.ar/facultades/fqbyf/1",
+                                "https://carreras.unsl.edu.ar/facultades/fica/1",
+                                "https://carreras.unsl.edu.ar/facultades/fcejs/1",
+                                "https://carreras.unsl.edu.ar/facultades/fch/1",
+                                "https://carreras.unsl.edu.ar/facultades/fapsi/1",
+                                "https://carreras.unsl.edu.ar/facultades/fcs/1",
+                                "https://carreras.unsl.edu.ar/facultades/ftu/1",
+                                "https://carreras.unsl.edu.ar/facultades/ipau/1"
+                            );
+
+                            $imagenes = array(
+                                "https://carreras.unsl.edu.ar/static/facultades/fcfmyn.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/fqbyf.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/fica.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/fcejs.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/fch.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/fapsi.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/fcs.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/ftu.png",
+                                "https://carreras.unsl.edu.ar/static/facultades/ipau.png"
+                            );
+                         
+                            ?>
+                            
+                  
                             <form method="post" action="" style="padding:10px 0;">
-                                <label for="url" >Selecciona una URL:</label>
+                                <label for="url">Selecciona una URLs:</label>
+
                                 <select id="url" name="url" class="w-100" style="max-width: 150px;">
                                     <option value="https://carreras.unsl.edu.ar/facultades/fcfmyn/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fcfmyn/1") echo "selected"; ?>>Facultad de Ciencias Físicas, Matemáticas y Naturales</option>
                                     <option value="https://carreras.unsl.edu.ar/facultades/fqbyf/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fqbyf/1") echo "selected"; ?>>Facultad de Química, Bioquímica y Farmacia</option>
@@ -351,6 +384,22 @@
                                 ?>
                                     <li class="adobe-product carres">
                                         <div class="products">
+
+
+                                            <?php
+                                            for ($x = 0; $x <= 8; $x++) {
+                                            if ($url === $carreras[$x]) {
+                                            ?>
+                                                <img style="width:55px;border-radius:50%; padding:8px;" src="<?php echo $imagenes[$x];?>" alt="">
+                                            <?php
+                                            } 
+                                        }?>
+
+                                        
+
+
+
+
                                             <?php echo $text; ?>
                                         </div>
 
@@ -438,4 +487,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js.js"></script>
 </body>
+
 </html>
