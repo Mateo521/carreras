@@ -926,3 +926,7 @@ button{
   padding:5px;
   border: 1px solid var(--theme-bg-color);
 }
+.button-wrapper a,  .button-wrapper a:hover, .button-wrapper a:focus, .button-wrapper a:visited{
+  color:inherit;
+  text-decoration:none;
+}

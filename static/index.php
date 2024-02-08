@@ -210,7 +210,7 @@
                                     <span class="status-circle green"></span>
                                     Updated</span>
                                 <div class="button-wrapper">
-                                    <button class="content-button status-button open">Open</button>
+                                    <button class="content-button status-button open">Abrir</button>
                                     <div class="menu">
                                         <button class="dropdown">
                                             <ul>
@@ -255,8 +255,8 @@
                                             <label for="check2">Remove old versions</label>
                                         </div>
                                         <div class="content-button-wrapper">
-                                            <button class="content-button status-button open close">Cancel</button>
-                                            <button class="content-button status-button">Continue</button>
+                                            <button class="content-button status-button open close">Cancelar</button>
+                                            <button class="content-button status-button">Continuar</button>
                                         </div>
                                     </div>
                                     <div class="menu">
@@ -284,7 +284,7 @@
                                     <span class="status-circle green"></span>
                                     Updated</span>
                                 <div class="button-wrapper">
-                                    <button class="content-button status-button open">Open</button>
+                                    <button class="content-button status-button open">Abrir</button>
                                     <div class="menu">
                                         <button class="dropdown">
                                             <ul>
@@ -322,8 +322,8 @@
                             libxml_clear_errors();
                             $xpath = new DOMXPath($dom);
                             $containers = $xpath->query('//div[@class="col-md-6 col-sm-6 col-lg-6 col-12"]');
-                       
-                     
+
+
 
                             // Array de enlaces
                             $carreras = array(
@@ -349,14 +349,14 @@
                                 "https://carreras.unsl.edu.ar/static/facultades/ftu.png",
                                 "https://carreras.unsl.edu.ar/static/facultades/ipau.png"
                             );
-                         
-                            ?>
-                            
-                  
+
+                        ?>
+
+
                             <form method="post" action="" style="padding:10px 0;">
                                 <label for="url">Selecciona una URLs:</label>
 
-                                <select id="url" name="url" class="w-100" >
+                                <select id="url" name="url" class="w-100">
                                     <option value="https://carreras.unsl.edu.ar/facultades/fcfmyn/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fcfmyn/1") echo "selected"; ?>>Facultad de Ciencias Físicas, Matemáticas y Naturales</option>
                                     <option value="https://carreras.unsl.edu.ar/facultades/fqbyf/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fqbyf/1") echo "selected"; ?>>Facultad de Química, Bioquímica y Farmacia</option>
                                     <option value="https://carreras.unsl.edu.ar/facultades/fica/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fica/1") echo "selected"; ?>>Facultad de Ingeniería y Ciencias Agropecuarias</option>
@@ -375,10 +375,19 @@
                                     $containerContent = $dom->saveHTML($container);
                                     $doc = new DOMDocument();
                                     $doc->loadHTML(mb_convert_encoding($containerContent, 'HTML-ENTITIES', 'UTF-8'));
+                                    // Obtener el enlace (href)
+                                    $linkElement = $doc->getElementsByTagName('a')->item(0);
+                                    $link = $linkElement->getAttribute('href');
+
+                                    // Obtener el título
                                     $titleElement = $doc->getElementsByTagName('div')->item(1);
                                     $title = $titleElement->nodeValue;
+
+                                    // Obtener el texto
                                     $textElement = $doc->getElementsByTagName('div')->item(2);
                                     $text = $textElement->nodeValue;
+
+                                    // Obtener la URL de la imagen
                                     $imgElement = $doc->getElementsByTagName('img')->item(0);
                                     $imgSrc = $imgElement->getAttribute('src');
                                 ?>
@@ -388,14 +397,14 @@
 
                                             <?php
                                             for ($x = 0; $x <= 8; $x++) {
-                                            if ($url === $carreras[$x]) {
+                                                if ($url === $carreras[$x]) {
                                             ?>
-                                                <img style="width:55px;border-radius:50%; padding:8px;" src="<?php echo $imagenes[$x];?>" alt="">
+                                                    <img style="width:55px;border-radius:50%; padding:8px;" src="<?php echo $imagenes[$x]; ?>" alt="">
                                             <?php
-                                            } 
-                                        }?>
+                                                }
+                                            } ?>
 
-                                        
+
 
 
 
@@ -404,7 +413,7 @@
                                         </div>
 
                                         <div class="button-wrapper">
-                                            <button class="content-button status-button open">Open</button>
+                                        <a href="<?php echo $link; ?>" target="_blank">  <button class="content-button status-button open">Abrir</button></a>
                                             <div class="menu">
                                                 <button class="dropdown">
                                                     <ul>
