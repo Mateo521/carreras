@@ -55,6 +55,7 @@ body {
   padding: 2em;
   width: 100%;
   height: 100vh;
+  margin:0;
   overflow:hidden;
 }
 @media screen and (max-width: 480px) {
@@ -516,7 +517,8 @@ body.light-mode .video-bg:before {
 }
 
 .content-wrapper-img {
-  width: 186px;
+  width: 299px;
+  border-radius:15px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: -25px;

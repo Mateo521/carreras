@@ -185,13 +185,12 @@
                                     <path xmlns="http://www.w3.org/2000/svg" d="M181 391c-41.353 0-75-33.647-75-75 0-8.291 6.709-15 15-15s15 6.709 15 15c0 24.814 20.186 45 45 45s45-20.186 45-45-20.186-45-45-45c-41.353 0-75-33.647-75-75s33.647-75 75-75 75 33.647 75 75c0 8.291-6.709 15-15 15s-15-6.709-15-15c0-24.814-20.186-45-45-45s-45 20.186-45 45 20.186 45 45 45c41.353 0 75 33.647 75 75s-33.647 75-75 75z" fill="#d6355b" data-original="#ff468c" />
                                     <path xmlns="http://www.w3.org/2000/svg" d="M391 361h-30c-8.276 0-15-6.724-15-15V211h45c8.291 0 15-6.709 15-15s-6.709-15-15-15h-45v-45c0-8.291-6.709-15-15-15s-15 6.709-15 15v45h-15c-8.291 0-15 6.709-15 15s6.709 15 15 15h15v135c0 24.814 20.186 45 45 45h30c8.291 0 15-6.709 15-15s-6.709-15-15-15z" fill="#d6355b" data-original="#d72878" />
                                 </svg>
-                                Adobe Stock
+                                Se encuentra disponible el calendario de actividades académicas 2024
                             </h3>
-                            <div class="content-text">Grab yourself 10 free images from Adobe Stock in a 30-day free
-                                trial plan and find perfect image, that will help you with your new project.</div>
+                            <div class="content-text">El mismo se encuadra en la legislación vigente de régimen de feriados nacionales y días no laborables, así como las normativas internas vigentes en la Universidad Nacional de San Luis (UNSL).</div>
                             <button class="content-button">Start free trial</button>
                         </div>
-                        <img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
+                        <img class="content-wrapper-img" src="http://www.noticias.unsl.edu.ar/wp-content/uploads/2023/12/calendario2024-740x380.jpg" alt="">
                     </div>
                     <div class="content-section">
                         <div class="content-section-title">Installed</div>
