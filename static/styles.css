@@ -895,14 +895,34 @@ body.light-mode .video-bg:before {
   background: var(--scrollbar-bg);
   border-radius: 10px;
 }
+select{
+  background-color:transparent;
+  color:white;
+  border:none;
+  width:100%;
+cursor:pointer;
+  padding:10px;
+  background-color: var(--content-bg);
+  border-radius: 14px;
+  border: 1px solid var(--theme-bg-color);
 
-#url {
-  width: 120px;
-  height: 30px;
-  border: 1px solid #999;
-  font-size: 18px;
-  color: #1c87c9;
-  background-color: #eee;
-  border-radius: 5px;
-  box-shadow: 4px 4px #ccc;
+}
+select:hover{
+  background-color: var(--theme-bg-color);
+}
+option{
+  color:black;
+}
+form{
+  gap:5px;
+  display:flex;
+}
+button{
+  background-color: var(--content-bg);
+  border-radius: 14px;
+
+  cursor:pointer;
+  color:white;
+  padding:5px;
+  border: 1px solid var(--theme-bg-color);
 }

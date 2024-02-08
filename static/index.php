@@ -356,7 +356,7 @@
                             <form method="post" action="" style="padding:10px 0;">
                                 <label for="url">Selecciona una URLs:</label>
 
-                                <select id="url" name="url" class="w-100" style="max-width: 150px;">
+                                <select id="url" name="url" class="w-100" >
                                     <option value="https://carreras.unsl.edu.ar/facultades/fcfmyn/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fcfmyn/1") echo "selected"; ?>>Facultad de Ciencias Físicas, Matemáticas y Naturales</option>
                                     <option value="https://carreras.unsl.edu.ar/facultades/fqbyf/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fqbyf/1") echo "selected"; ?>>Facultad de Química, Bioquímica y Farmacia</option>
                                     <option value="https://carreras.unsl.edu.ar/facultades/fica/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/fica/1") echo "selected"; ?>>Facultad de Ingeniería y Ciencias Agropecuarias</option>
@@ -367,7 +367,7 @@
                                     <option value="https://carreras.unsl.edu.ar/facultades/ftu/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/ftu/1") echo "selected"; ?>>Facultad de Turismo y Urbanismo</option>
                                     <option value="https://carreras.unsl.edu.ar/facultades/ipau/1" <?php if ($url === "https://carreras.unsl.edu.ar/facultades/ipau/1") echo "selected"; ?>>Instituto Politécnico y Artístico Universitario</option>
                                 </select>
-                                <button type="submit">Obtener Contenido</button>
+                                <button type="submit">Obtener contenido</button>
                             </form>
                             <ul>
                                 <?php
