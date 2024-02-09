@@ -99,6 +99,42 @@
     </style>
     <hr>
     <p>Pruebas de base de datos</p>
+    <?php
+// Conexión a la base de datos
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "unsl";
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Consulta SQL para obtener los datos de la tabla "carreras"
+$sql = "SELECT * FROM carreras";
+$result = $conn->query($sql);
+
+// Si hay resultados, imprimir la tabla
+if ($result->num_rows > 0) {
+    echo "<table border='1'>";
+    echo "<tr><th>ID</th><th>Carrera</th><th>Facultad</th><th>Años</th><th>Nivel</th><th>Sede</th><th>Tipo</th></tr>";
+    // Imprimir los datos de cada fila
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["carrera"] . "</td><td>" . $row["facultad"] . "</td><td>" . $row["años"] . "</td><td>" . $row["nivel"] . "</td><td>" . $row["sede"] . "</td><td>" . $row["tipo"] . "</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "No se encontraron resultados.";
+}
+
+// Cerrar conexión
+$conn->close();
+?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
