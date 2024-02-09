@@ -189,6 +189,7 @@
                 $class = $entry->getAttribute('class');
                 if (strpos($class, 'col-md-6') !== false) {
                     $lastEntry = $entry;
+                    break;
                 }
             }
 
@@ -232,7 +233,7 @@
                                 <?php echo $title; ?>
                             </h3>
                             <div class="content-text"><?php echo $summary; ?></div>
-                            <button class="content-button">Ver noticia</button>
+                            <button class="content-button">Ver noticia de <?php echo $date; ?></button>
                         </div>
                        
                         <img class="content-wrapper-img" src="<?php echo $imagenn; ?>" alt="">
