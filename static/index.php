@@ -164,6 +164,50 @@
                     </div>
                 </div>
             </div>
+
+            <?php
+
+            $url = 'http://www.noticias.unsl.edu.ar/category/principal/';
+
+            // Obtiene el contenido de la página
+            $html = file_get_contents($url);
+
+            // Crea un nuevo objeto DOMDocument
+            $dom = new DOMDocument();
+
+            // Carga el HTML en el objeto DOMDocument, ignorando los errores HTML
+            libxml_use_internal_errors(true);
+            $dom->loadHTML($html);
+            libxml_clear_errors();
+
+            // Encuentra todos los elementos con la clase 'col-md-6'
+            $entries = $dom->getElementsByTagName('div');
+
+            // Encuentra el último elemento con la clase 'col-md-6'
+            $lastEntry = null;
+            foreach ($entries as $entry) {
+                $class = $entry->getAttribute('class');
+                if (strpos($class, 'col-md-6') !== false) {
+                    $lastEntry = $entry;
+                }
+            }
+
+            // Extrae la información que necesitas del último elemento
+            if ($lastEntry) {
+                $date = $lastEntry->getElementsByTagName('li')[0]->textContent;
+                $title = $lastEntry->getElementsByTagName('h3')[0]->textContent;
+                $summary = $lastEntry->getElementsByTagName('p')[1]->textContent;
+
+
+                $imagenn = $lastEntry->getElementsByTagName('img')[0]->getAttribute('src');
+            } else {
+                #  echo "No se encontraron entradas.\n";
+            }
+
+            ?>
+
+
+
             <div class="main-container">
                 <div class="main-header">
                     <a class="menu-link-main" href="#">All Apps</a>
@@ -185,12 +229,13 @@
                                     <path xmlns="http://www.w3.org/2000/svg" d="M181 391c-41.353 0-75-33.647-75-75 0-8.291 6.709-15 15-15s15 6.709 15 15c0 24.814 20.186 45 45 45s45-20.186 45-45-20.186-45-45-45c-41.353 0-75-33.647-75-75s33.647-75 75-75 75 33.647 75 75c0 8.291-6.709 15-15 15s-15-6.709-15-15c0-24.814-20.186-45-45-45s-45 20.186-45 45 20.186 45 45 45c41.353 0 75 33.647 75 75s-33.647 75-75 75z" fill="#d6355b" data-original="#ff468c" />
                                     <path xmlns="http://www.w3.org/2000/svg" d="M391 361h-30c-8.276 0-15-6.724-15-15V211h45c8.291 0 15-6.709 15-15s-6.709-15-15-15h-45v-45c0-8.291-6.709-15-15-15s-15 6.709-15 15v45h-15c-8.291 0-15 6.709-15 15s6.709 15 15 15h15v135c0 24.814 20.186 45 45 45h30c8.291 0 15-6.709 15-15s-6.709-15-15-15z" fill="#d6355b" data-original="#d72878" />
                                 </svg>
-                                Se encuentra disponible el calendario de actividades académicas 2024
+                                <?php echo $title; ?>
                             </h3>
-                            <div class="content-text">El mismo se encuadra en la legislación vigente de régimen de feriados nacionales y días no laborables, así como las normativas internas vigentes en la Universidad Nacional de San Luis (UNSL).</div>
-                            <button class="content-button">Start free trial</button>
+                            <div class="content-text"><?php echo $summary; ?></div>
+                            <button class="content-button">Ver noticia</button>
                         </div>
-                        <img class="content-wrapper-img" src="http://www.noticias.unsl.edu.ar/wp-content/uploads/2023/12/calendario2024-740x380.jpg" alt="">
+                       
+                        <img class="content-wrapper-img" src="<?php echo $imagenn; ?>" alt="">
                     </div>
                     <div class="content-section">
                         <div class="content-section-title">Installed</div>
@@ -412,7 +457,7 @@
                                         </div>
 
                                         <div class="button-wrapper">
-                                        <a href="<?php echo $link; ?>" target="_blank">  <button class="content-button status-button open">Abrir</button></a>
+                                            <a href="<?php echo $link; ?>" target="_blank"> <button class="content-button status-button open">Abrir</button></a>
                                             <div class="menu">
                                                 <button class="dropdown">
                                                     <ul>

@@ -177,6 +177,8 @@ body.light-mode .video-bg:before {
   transition: 0.3s;
 }
 @media screen and (max-width: 610px) {
+
+
   .header-menu a:not(.main-header-link) {
     display: none;
   }
@@ -526,9 +528,19 @@ body.light-mode .video-bg:before {
      object-position: center;
 }
 @media screen and (max-width: 570px) {
-  .content-wrapper-img {
-    width: 110px;
+  .content-wrapper-header{
+    flex-direction:column-reverse;
+  
   }
+  .content-wrapper-context{
+    padding:10px 0;
+  }
+  .content-wrapper-img{
+    margin-top:-5px;
+    height:100%;
+    width:100%;
+  }
+
 }
 
 .content-section {
