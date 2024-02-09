@@ -108,7 +108,7 @@ $dbname = "unsl";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
-
+$conn ->set_charset("utf8");
 // Verificar la conexión
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
@@ -118,13 +118,14 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM carreras";
 $result = $conn->query($sql);
 
+
 // Si hay resultados, imprimir la tabla
 if ($result->num_rows > 0) {
     echo "<table border='1'>";
     echo "<tr><th>ID</th><th>Carrera</th><th>Facultad</th><th>Años</th><th>Nivel</th><th>Sede</th><th>Tipo</th></tr>";
     // Imprimir los datos de cada fila
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["carrera"] . "</td><td>" . $row["facultad"] . "</td><td>" . $row["años"] . "</td><td>" . $row["nivel"] . "</td><td>" . $row["sede"] . "</td><td>" . $row["tipo"] . "</td></tr>";
+        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["carrera"] . "</td><td>" . $row["facultad"] . "</td><td>" . $row["anios"] . "</td><td>" . $row["nivel"] . "</td><td>" . $row["sede"] . "</td><td>" . $row["tipo"] . "</td></tr>";
     }
     echo "</table>";
 } else {
