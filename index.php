@@ -137,6 +137,9 @@ $conn->query($sql);
     ?>
 
     <style>
+        /*
+        PRUEBAS
+        */
         .card {
             width: 160px;
         }
