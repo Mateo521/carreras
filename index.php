@@ -172,9 +172,6 @@ $conn->query($sql);
     // Consulta SQL para obtener los datos de la tabla "carreras"
     $sql = "SELECT * FROM carreras";
     $result = $conn->query($sql);
-
-
-    // Si hay resultados, imprimir la tabla
     if ($result->num_rows > 0) {
         echo "<table border='1' style='width:100%;'>";
         echo "<tr><th>ID</th><th>Carrera</th><th>Facultad</th><th>Años</th><th>Nivel</th><th>Sede</th><th>Tipo</th></tr>";
