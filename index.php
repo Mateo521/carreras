@@ -55,7 +55,7 @@ if ($conn->connect_error) {
         if ($container_2->length > 0) {
             // Obtener el texto del título
             $facultad = $container_2->item(0)->textContent;
-
+ /*no funca*/
             $anios = $anios->item(0)->textContent;
         } 
 
