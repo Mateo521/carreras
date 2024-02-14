@@ -22,6 +22,10 @@
   --scrollbar-bg: rgb(1 2 3 / 40%);
 }
 
+
+/*
+
+Pruebas */
 .light-mode {
   --theme-bg-color: rgb(255 255 255 / 31%);
   --theme-color: #3c3a3a;
