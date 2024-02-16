@@ -80,7 +80,7 @@ if ($conn->connect_error) {
             <button type="submit">Obtener Contenido</button>
         </form>
         <div class="d-flex gap-2 flex-wrap justify-content-center cob">
-            <?php
+            <?php/*no funca*/
             foreach ($containers as $container) {
                 $containerContent = $dom->saveHTML($container);
                 $doc = new DOMDocument();
