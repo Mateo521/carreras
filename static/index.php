@@ -433,6 +433,7 @@
                                     $text = $textElement->nodeValue;
 
                                     // Obtener la URL de la imagen
+                                    
                                     $imgElement = $doc->getElementsByTagName('img')->item(0);
                                     $imgSrc = $imgElement->getAttribute('src');
                                 ?>
@@ -448,11 +449,6 @@
                                             <?php
                                                 }
                                             } ?>
-
-
-
-
-
 
                                             <?php echo $text; ?>
                                         </div>
@@ -523,7 +519,7 @@
                                             <path d="M27.44 39H24.2l-2.76-9.04h-8.32L10.48 39H7.36l8.24-28h3.32l8.52 28zm-6.72-12l-3.48-11.36L13.88 27h6.84zM31.48 33.48c0 2.267 1.333 3.399 4 3.399 1.653 0 3.466-.546 5.44-1.64L42 37.6c-2.054 1.254-4.2 1.881-6.44 1.881-4.64 0-6.96-1.946-6.96-5.841v-8.2c0-2.16.673-3.841 2.02-5.04 1.346-1.2 3.126-1.801 5.34-1.801s3.94.594 5.18 1.78c1.24 1.187 1.86 2.834 1.86 4.94V30.8l-11.52.6v2.08zm8.6-5.24v-3.08c0-1.413-.44-2.42-1.32-3.021-.88-.6-1.907-.899-3.08-.899-1.174 0-2.167.359-2.98 1.08-.814.72-1.22 1.773-1.22 3.16v3.199l8.6-.439z" fill="#e4d1eb" data-original="#e7adfb" />
                                         </g>
                                     </svg>
-                                    After Effects
+                                    Befff
                                 </span>
                                 <div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
                                 <div class="app-card-buttons">
