@@ -62,6 +62,7 @@ if ($conn->connect_error) {
             $anios = $anios->item(0)->textContent;
         } 
 
+            
        /*no funca*/
     ?>
         <form method="post" action="" class="p-2">
