@@ -92,9 +92,6 @@ if ($conn->connect_error) {
 
                 $imgElement = $doc->getElementsByTagName('img')->item(0);
                 $imgSrc = $imgElement->getAttribute('src');
-
-               
-
                 $nivel = "-";
                 $sede = "-";
                 $tipo = "-";
