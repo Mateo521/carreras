@@ -22,7 +22,6 @@
   --scrollbar-bg: rgb(1 2 3 / 40%);
 }
 
-
 /*
 
 Pruebas */
@@ -121,8 +120,6 @@ img {
 .light-mode .dropdown.is-active ul {
   background-color: rgba(255, 255, 255, 0.94);
 }
-
-
 
 body.light-mode:before,
 body.light-mode .video-bg:before {
@@ -938,7 +935,6 @@ form{
 button{
   background-color: var(--content-bg);
   border-radius: 14px;
-
   cursor:pointer;
   color:white;
   padding:5px;

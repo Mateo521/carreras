@@ -30,6 +30,10 @@ if ($conn->connect_error) {
 <body>
     <?php
 
+
+
+
+
     //Obviar conexión segura
     stream_context_set_default(
         array(
