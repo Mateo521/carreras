@@ -107,7 +107,6 @@ if ($conn->connect_error) {
 
 
 
-
 // Cerrar conexión a la base de datos
 
 
